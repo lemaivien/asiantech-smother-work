@@ -2,19 +2,25 @@
 ## Các branches
 ### branch master
 Đây là branch dùng để deploy lên server production, trên này hoàn toàn sạch sẽ không chứa bugs.
+
 ### branch dev hoặc staging
+
 Đây là branch dùng để deploy lên server staging, dùng cho khách hàng test trước khi đưa lên production. Các issues phải được test kĩ càng hết bug rồi  mới  được phép merge vào đây. 
+
 ###Các branch để giải quyết các issue
 Khi có 1 issue trên readmine, các dev checkout từ branch dev ra một branch mới có tên theo định dạng: issue_readmine_id. Các dev tiến hành giải quyết các vấn đề , sau khi hoàn thành thì tạo 1 pull request vào nhánh dev để leader để  review và merge code. 
+
 ##Các quy tắc về pull request
 - Tên pull request phải bắt đầu bằng tên issue đặt trong  dấu []. Vídụ : [1234] Add new js file.
 - Tên pull request phải mô tả rõ được những nội dung chính đã fix 
 - Tên pull request không được quá dài
 - Nội dung mô tả pull request: ghi rõ đã fix những gì giả pháp ra sao và dán link đến issue trên redmine.
+
 ##Quy tắc commit
 - Không được add quá nhiều file vào một commit, nên chia nhỏ các task để commit nhằm giúp dễ đọc và review code hơn. Ví dụ  thể commit sau hi hoàn thành 1 function hoặc hoàn thành 1 file view. 
-- Message của commit tuyệt đối không được dùng  các từ chung chung  như  "Fix  bug", "Fix comment", "add new file", "delete line"....
-## Vòng đời của 1 issue 
+- Message của commit tuyệt đối không được dùng  các từ chung chung  như  "Fix  bug", "Fix comment", "add new file", "delete line".
+
+##Vòng đời của 1 issue 
 1. developer checkout branch từ branch dev đổi trạng thái của issue trên redmine thành "In progress"
 2. Tiến hành giải quyết vấn đề trên branch vừa tạo 
 3. Tạo pull request vào branch dev và chuyển trạng thái "Resolved " , assign cho leader . Comment rõ vấn đề, lý do, cách giải quyết  và  dán link đến pull request trên github. Đối với task thì không cần mô tả lý do. 
